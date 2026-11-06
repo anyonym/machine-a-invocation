@@ -115,10 +115,10 @@ h1 {
 }
 
 /* =====================================
-   4. BOUTON MAGIQUE
+   4. BOUTONS MAGIQUES
 ===================================== */
 
-#invocation button {
+button {
   position: relative;
   overflow: hidden;
 
@@ -145,7 +145,7 @@ h1 {
     filter 0.25s ease;
 }
 
-#invocation button:active {
+button:active {
   transform: scale(0.94);
   box-shadow:
     0 0 20px #f6e6a9,

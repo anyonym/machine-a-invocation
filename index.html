@@ -9,33 +9,41 @@
   </head>
   <body>
     <header class="bienvenue">
-        <p>
-        ✨ Bienvenue à toi que le destin a guidé jusqu'ici ! Cette machine à invocation apparaît et se matérialise au gré des requêtes de ton navigateur, spécialement à ton attention ... ✨
+      <p>
+        ✨ Bienvenue à toi que le destin a guidé jusqu'ici ! Cette machine à
+        invocation apparaît et se matérialise au gré des requêtes de ton
+        navigateur, spécialement à ton attention ... ✨
       </p>
     </header>
+    
     <main>
       <section id="formulaire">
         <h1>📜 Nevercode 🪄</h1>
         <form id="invocation">
-          <label id="prenom" for="prenom">✨ Quel est ton prénom ?</label>
-          <input type="text" placeholder="Ton prénom..." required />
+          <label for="prenom">✨ Quel est ton prénom ?</label>
+          <input id="prenom" type="text" placeholder="Ton prénom..." required />
 
-          <label id="creature">🔮 A quelle créature formuler ta demande ?</label>
-          <select>
+          <label for="creature"
+            >🔮 A quelle créature formuler ta demande ?</label
+          >
+          <select id="creature">
             <option value="">Choisis ta créature...</option>
-            <option value="Phénix">🐦‍🔥 Le Phénix</option>
-            <option value="Dragon">🐉 Le Dragon</option>
-            <option value="Licorne">🦄 La Licorne</option>
-            <option value="Corbeau">🐦‍⬛ Le Corbeau</option>
+            <option value="Le Phénix">🐦‍🔥 Le Phénix</option>
+            <option value="Le Dragon">🐉 Le Dragon</option>
+            <option value="La Licorne">🦄 La Licorne</option>
+            <option value="Le Corbeau">🐦‍⬛ Le Corbeau</option>
           </select>
 
           <button type="submit">✧ Révélation ✧</button>
         </form>
       </section>
+
       <section id="resultat" class="cache">
         <p id="message"></p>
+        <button id="recommencer" type="button">✧ Une autre demande ? ✧</button>
       </section>
     </main>
+    
     <footer>
       <p>© YE 2026</p>
     </footer>
