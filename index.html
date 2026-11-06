@@ -3,33 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Machine à invocation</title>
+    <title>📜 Nevercode 🪄</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-        <p>✨ Bienvenue à toi qui apparaît ici au gré de ton navigateur ✨</p>
+    <header class="bienvenue">
+        <p>
+        ✨ Bienvenue à toi que le destin a guidé jusqu'ici ! Cette machine à invocation apparaît et se matérialise au gré des requêtes de ton navigateur, spécialement à ton attention ... ✨
+      </p>
     </header>
     <main>
-        <section>
-            <h1>📜🪄 La Machine à invocation 🔮✨</h1>
-            <form id="invocation">
-                <label id="prenom"></label>
-                <input id="prenom" type="text">
-                <label id="creature"></label>
-                <select id="creature">
-                    <option>🐦‍🔥 Le Phénix</option>
-                    <option>🐉 Le Dragon</option>
-                    <option>🦄 La Licorne</option>
-                    <option>🐦‍⬛ Le Corbeau</option>
-                </select>
-                <button type="submit"></button>
-            </form>
-        </section>
+      <section id="formulaire">
+        <h1>📜 Nevercode 🪄</h1>
+        <form id="invocation">
+          <label id="prenom" for="prenom">✨ Quel est ton prénom ?</label>
+          <input type="text" placeholder="Ton prénom..." required />
+
+          <label id="creature">🔮 A quelle créature formuler ta demande ?</label>
+          <select>
+            <option value="">Choisis ta créature...</option>
+            <option value="Phénix">🐦‍🔥 Le Phénix</option>
+            <option value="Dragon">🐉 Le Dragon</option>
+            <option value="Licorne">🦄 La Licorne</option>
+            <option value="Corbeau">🐦‍⬛ Le Corbeau</option>
+          </select>
+
+          <button type="submit">✧ Révélation ✧</button>
+        </form>
+      </section>
+      <section id="resultat" class="cache">
+        <p id="message"></p>
+      </section>
     </main>
     <footer>
-        <p>© YE 2026</p>
+      <p>© YE 2026</p>
     </footer>
   </body>
 </html>

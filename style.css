@@ -1,0 +1,254 @@
+
+/* =====================================
+   1. BASE GÉNÉRALE - MOBILE FIRST
+   À partir de 375px
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  font-family: Georgia, serif;
+  color: #eee6d5;
+
+  background:
+    radial-gradient(circle at 50% 20%, #33264d 0%, transparent 45%),
+    linear-gradient(135deg, #100d19, #1d1729 55%, #09080e);
+}
+
+/* =====================================
+   2. EN-TÊTE
+===================================== */
+
+.bienvenue {
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+  animation: apparition 1.5s ease;
+}
+
+.bienvenue p {
+    color: #b9a9ca;
+    line-height: 1.5;
+}
+
+/* =====================================
+3. FORMULAIRE
+===================================== */
+
+h1 {
+  color: #e3c77b;
+  text-align: center;
+  font-size: clamp(1.6rem, 7vw, 2.2rem);
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px #b18ad9;
+}
+
+#formulaire {
+    width: 100%;
+    max-width: 460px;
+    padding: 25px 20px;
+    
+    background: linear-gradient(145deg, #282035, #171321);
+    
+    border: 1px solid #a78b54;
+    border-radius: 12px;
+    
+    box-shadow:
+    0 0 15px #8b64ae55,
+    0 0 40px #00000099,
+    inset 0 0 20px #a78b5415;
+}
+
+#invocation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Champs */
+
+#invocation label {
+  color: #dfc78e;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+#invocation input,
+#invocation select {
+  width: 100%;
+  min-width: 0;
+  padding: 13px;
+
+  color: #eee6d5;
+  background: #100e18;
+
+  border: 1px solid #6d5a83;
+  border-radius: 6px;
+
+  font-family: Georgia, serif;
+  font-size: 1rem;
+
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+#invocation input::placeholder {
+  color: #8e819c;
+  font-style: italic;
+}
+
+#invocation input:focus,
+#invocation select:focus {
+  outline: none;
+  border-color: #d5b76b;
+  box-shadow: 0 0 12px #b18ad966;
+}
+
+/* =====================================
+   4. BOUTON MAGIQUE
+===================================== */
+
+#invocation button {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  margin-top: 12px;
+  padding: 15px 10px;
+
+  color: #21182b;
+  background: linear-gradient(120deg, #c5a65e, #f0d99b, #a88b50);
+
+  border: 1px solid #f0d99b;
+  border-radius: 6px;
+
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+#invocation button:active {
+  transform: scale(0.94);
+  box-shadow:
+    0 0 20px #f6e6a9,
+    0 0 45px #bb8cff,
+    0 0 70px #8b5ac7;
+}
+
+/* =====================================
+   5. RÉSULTAT
+===================================== */
+
+#resultat {
+  width: 100%;
+  max-width: 460px;
+  padding: 25px 20px;
+
+  text-align: center;
+  color: #e3c77b;
+
+  background: #211a30;
+  border: 1px solid #a78b54;
+  border-radius: 10px;
+
+  box-shadow: 0 0 25px #a77bd966;
+
+  animation: apparition 1s ease;
+}
+
+#message {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* =====================================
+   6. CLASSES UTILITAIRES
+===================================== */
+
+.cache {
+  display: none;
+}
+
+/* =====================================
+   7. ANIMATIONS
+===================================== */
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+   8. Media Query
+===================================== */
+
+@media (min-width: 768px) {
+
+  body {
+    min-height: 100vh;
+    padding: 40px 30px;
+    gap: 35px;
+  }
+
+  /* HEADER */
+
+  .bienvenue {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .bienvenue p {
+    max-width: 444px;
+    margin: 20px auto;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  /* FORMULAIRE */
+
+  #formulaire {
+    width: 100%;
+    max-width: none;
+    flex: 1;
+    padding: 40px;
+  }
+
+  #invocation {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* RÉSULTAT */
+
+  #resultat {
+    width: 100%;
+    max-width: none;
+  }
+}
