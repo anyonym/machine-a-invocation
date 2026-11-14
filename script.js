@@ -23,7 +23,7 @@ formulaire.addEventListener("submit", (event) => {
     document.getElementById("message").textContent = message;
 
     // 7. Masquer le formulaire
-    document.getElementById("invocation").classList.add("cache");
+    document.getElementById("formulaire").classList.add("cache");
 
     // 8. Afficher le résultat
     document.getElementById("resultat").classList.remove("cache");
@@ -38,7 +38,7 @@ btnRecommencer.addEventListener("click", () => {
     document.getElementById("resultat").classList.add("cache");
 
     //2. Réafficher le formulaire
-    document.getElementById("invocation").classList.remove("cache");
+    document.getElementById("formulaire").classList.remove("cache");
     
     // Réactiver les champs
     document.getElementById("prenom").disabled = false;
